@@ -1,17 +1,21 @@
 import React from 'react';
 import './App.css';
-import Products from './components/products/products';
-import Header from './layout/components/header/header';
-import Footer from './layout/components/footer/footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Footer, Header } from './layout/components/';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { HomePage } from './pages';
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <>
-    <Header />
     <QueryClientProvider client={queryClient}>
-      <Products />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </QueryClientProvider>
     <Footer />
   </>

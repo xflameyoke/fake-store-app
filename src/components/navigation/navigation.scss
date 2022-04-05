@@ -1,0 +1,26 @@
+.nav {
+  width: 100vw;
+  background-color: aquamarine;
+  font-size: 24px;
+  border-bottom: 2px solid black;
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+
+  li {
+    padding: 10px;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

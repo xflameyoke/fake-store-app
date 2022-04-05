@@ -10,9 +10,6 @@ const Products = () => {
 
   const { data, status } = useQuery('products', fetchProducts);
 
-  // eslint-disable-next-line no-console
-  console.log(data);
-
   if (status === 'loading') {
     return <h1>Loading...</h1>;
   }
