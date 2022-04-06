@@ -2,10 +2,6 @@ import React from 'react';
 import { Products } from '../../components';
 import './homePage.scss';
 
-const HomePage = () => (
-  <div className="wrapper">
-    <Products />
-  </div>
-);
+const HomePage = () => <h1>Home Page</h1>;
 
 export default HomePage;

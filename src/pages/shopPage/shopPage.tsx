@@ -1,5 +1,11 @@
 import React from 'react';
+import { Products, ShopNav } from '../../components';
 
-const ShopPage = () => <h1>ShopPage</h1>;
+const ShopPage = () => (
+  <div>
+    <ShopNav />
+    <Products />;
+  </div>
+);
 
 export default ShopPage;
