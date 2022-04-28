@@ -22,8 +22,8 @@ const Products = () => {
     <div className="products">
       <p className="products__title">Products:</p>
       <div className="products__list">
-        {data.map((product: { title: string }) => (
-          <div>{product.title}</div>
+        {data.map((product: { id: number, title: string }) => (
+          <li key={product.id}>{product.title}</li>
         ))}
       </div>
     </div>

@@ -3,8 +3,8 @@ import { Products, ShopNav } from '../../components';
 
 const ShopPage = () => (
   <div>
-    <ShopNav />
-    <Products />;
+    <ShopNav link="jawelery" linkName="Jawelery" />
+    <Products />
   </div>
 );
 

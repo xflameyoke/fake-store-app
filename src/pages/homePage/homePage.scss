@@ -1,4 +1,35 @@
 .wrapper {
-  max-width: 1000px;
-  height: auto;
+  width: 100vw;
+  height: 800px;
+  background-image: url('https://images4.alphacoders.com/869/869425.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.container {
+  text-shadow: 12px 12px 3px rgba(150, 150, 150, 0.71);
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__header {
+  font-size: 76px;
+}
+
+.container__paragraph {
+  margin-top: 70px;
+  font-size: 48px;
+}
+
+.container_buttonGroup {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
