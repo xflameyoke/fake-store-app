@@ -2,13 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer, Header } from './layout/components';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import {
-  ContactPage,
-  HomePage,
-  LoginPage,
-  ShopPage,
-  SignupPage,
-} from './pages';
+import { ContactPage, HomePage, LoginPage, ShopPage } from './pages';
 
 const queryClient = new QueryClient();
 
@@ -22,7 +16,6 @@ const App = () => (
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
