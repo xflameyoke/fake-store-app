@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import './auth.scss';
-import { Button, Form } from 'antd';
+import { Button, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
 
 const Auth = () => {
@@ -17,39 +17,46 @@ const Auth = () => {
     },
   });
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed', errorInfo);
+  const onFinishFailed = () => {
+    alert('Failed');
   };
   return (
-    <Form
-      name="basic"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 16 }}
-      initialValues={{ remember: true }}
-      onFinish={formik.handleSubmit}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-    >
-      <label htmlFor="email">Email</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        id="password"
-        name="password"
-        type="password"
-        onChange={formik.handleChange}
-        value={formik.values.password}
-      />
-      <Button type="primary" htmlType="submit">
-        Submit
-      </Button>
-    </Form>
+    <div className="auth-container">
+      <Form
+        className="form"
+        name="basic"
+        initialValues={{ remember: true }}
+        onFinish={formik.handleSubmit}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
+      >
+        <label htmlFor="email" className="form--label">
+          Email
+        </label>
+        <Input
+          className="form--input"
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
+        <label htmlFor="password" className="form--label">
+          Password
+        </label>
+        <Input
+          className="form--input"
+          id="password"
+          name="password"
+          type="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+        />
+        <Button type="primary" htmlType="submit" className="form--button">
+          Submit
+        </Button>
+      </Form>
+    </div>
   );
 };
 
