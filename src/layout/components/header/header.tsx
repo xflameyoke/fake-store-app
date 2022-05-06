@@ -4,7 +4,9 @@ import { Nav } from '../../../components';
 
 const Header = () => (
   <div className="header">
-    <Nav />
+    <Nav link="/" linkName="Home" />
+    <Nav link="/shop" linkName="Shop" />
+    <Nav link="/contact" linkName="Contact" />
   </div>
 );
 

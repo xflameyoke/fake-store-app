@@ -1,4 +1,3 @@
-export * from './navigation';
 export * from './products/';
-export * from './shopNav';
+export * from './nav';
 export * from './authentication';
