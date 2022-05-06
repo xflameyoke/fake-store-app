@@ -1,18 +1,12 @@
 {
   "root": true,
-  "parser": "@babel/eslint-parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "security",
-    "prettier",
-    "@babel"
-  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "security", "prettier", "@babel"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "env": {
     "es6": true
@@ -30,7 +24,8 @@
     "react/jsx-uses-react": 2,
     "react/react-in-jsx-scope": 2,
     "prettier/prettier": [
-      "error", {
+      "error",
+      {
         "singleQuote": true,
         "trailingComma": "es5",
         "bracketSpacing": true,
@@ -44,5 +39,4 @@
       }
     ]
   }
-  
 }

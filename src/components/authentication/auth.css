@@ -1,0 +1,41 @@
+.form {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  margin: 5px;
+}
+
+.form__label ::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.form__label :-ms-input-placeholder {
+  text-align: center;
+}
+
+.form__label ::-ms-input-placeholder {
+  text-align: center;
+}
+
+.form__label ::-moz-placeholder {
+  text-align: center;
+}
+
+.form__label ::placeholder {
+  text-align: center;
+}
+
+.form--button {
+  width: 100px;
+  margin: 10px;
+}
