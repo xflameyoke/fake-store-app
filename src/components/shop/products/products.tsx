@@ -20,11 +20,17 @@ const Products = () => {
 
   return (
     <div className="products">
-      <p className="products__title">Products:</p>
       <div className="products__list">
-        {data.map((product: { id: number; title: string }) => (
-          <li key={product.id}>{product.title}</li>
-        ))}
+        {data
+          .filter(
+            (product: { category: string }) => product.category === 'jewelery'
+          )
+          .map((product: { id: number, title: string, category: string }) => (
+            <li key={product.id}>
+              <span>Title: {product.title}</span>
+              <span>Category: {product.category}</span>
+            </li>
+          ))}
       </div>
     </div>
   );

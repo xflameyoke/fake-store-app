@@ -2,10 +2,19 @@
   width: 100vw;
   height: 40px;
   display: flex;
-  justify-content: space-around;
+  border-top: 1px solid white;
+  padding-left: 20%;
+  background-color: #313765;
 }
 
 .container {
   height: 100vh;
   width: 100%;
+}
+
+.container__products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 }

@@ -5,8 +5,10 @@ import './shopPage.scss';
 const ShopPage = () => (
   <div className="container">
     <div className="container__nav">
-      <Nav link="jawelery" linkName="Jawelery" />
-      <Nav link="clothes" linkName="Clothes" />
+      <Nav link="/jewelery" linkName="Jewelery" />
+      <Nav link="/menclothes" linkName="Men's clothes" />
+      <Nav link="/womenclothes" linkName="Women's clothes" />
+      <Nav link="/electronics" linkName="Electronics" />
     </div>
     <div className="container__products">
       <Products />
