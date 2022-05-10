@@ -1,5 +1,4 @@
 import React from 'react';
-import { Products } from '../../components';
 import './homePage.scss';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';

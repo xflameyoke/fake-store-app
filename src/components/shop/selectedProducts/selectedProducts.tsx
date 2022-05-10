@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
+import ProductsList from '../productsList/productsList';
+import { Nav } from '../../nav';
 
 const SelectedProducts = () => {
   const { id } = useParams();
@@ -21,13 +23,37 @@ const SelectedProducts = () => {
   }
 
   return (
-    <div>
-      {data
-        .filter((selected: { category: string }) => selected.category === id)
-        .map((selected: { id: number, title: string }) => (
-          <li key={selected.id}>{selected.title}</li>
-        ))}
-    </div>
+    <>
+      <div className="container__nav">
+        <Nav link="/shop/jewelery" linkName="Jewelery" />
+        <Nav link="/shop/men's clothing" linkName="Men's clothes" />
+        <Nav link="/shop/women's clothing" linkName="Women's clothes" />
+        <Nav link="/shop/electronics" linkName="Electronics" />
+      </div>
+      <div>
+        {data
+          .filter(
+            (selected: { category: string }) =>
+              selected.category === id?.toString()
+          )
+          .map(
+            (selected: {
+              id: number,
+              title: string,
+              price: number,
+              description: string,
+            }) => (
+              <ProductsList
+                key={selected.id}
+                title={selected.title}
+                id={selected.id}
+                description={selected.description}
+                price={selected.price}
+              />
+            )
+          )}
+      </div>
+    </>
   );
 };
 

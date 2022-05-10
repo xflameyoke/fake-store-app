@@ -3,14 +3,14 @@ import { Nav, Products } from '../../components';
 import './shopPage.scss';
 
 const ShopPage = () => (
-  <div className="container">
+  <div className="shop__container">
     <div className="container__nav">
-      <Nav link="/jewelery" linkName="Jewelery" />
-      <Nav link="/menclothes" linkName="Men's clothes" />
-      <Nav link="/womenclothes" linkName="Women's clothes" />
-      <Nav link="/electronics" linkName="Electronics" />
+      <Nav link="/shop/jewelery" linkName="Jewelery" />
+      <Nav link="/shop/men's clothing" linkName="Men's clothes" />
+      <Nav link="/shop/women's clothing" linkName="Women's clothes" />
+      <Nav link="/shop/electronics" linkName="Electronics" />
     </div>
-    <div className="container__products">
+    <div className="products__container">
       <Products />
     </div>
   </div>

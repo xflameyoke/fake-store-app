@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import './products.scss';
+import ProductsList from '../productsList/productsList';
 
 const Products = () => {
   const fetchProducts = async () => {
@@ -21,16 +22,23 @@ const Products = () => {
   return (
     <div className="products">
       <div className="products__list">
-        {data
-          .filter(
-            (product: { category: string }) => product.category === 'jewelery'
+        {data.map(
+          (product: {
+            id: number,
+            title: string,
+            category: string,
+            description: string,
+            price: number,
+          }) => (
+            <ProductsList
+              key={product.id}
+              title={product.title}
+              id={product.id}
+              description={product.description}
+              price={product.price}
+            />
           )
-          .map((product: { id: number, title: string, category: string }) => (
-            <li key={product.id}>
-              <span>Title: {product.title}</span>
-              <span>Category: {product.category}</span>
-            </li>
-          ))}
+        )}
       </div>
     </div>
   );
