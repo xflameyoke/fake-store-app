@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer, Header } from './layout/components';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ContactPage, HomePage, LoginPage, ShopPage } from './pages';
-import { SelectedProducts } from './components/shop/selectedProducts';
+import { SelectedProducts } from './components';
 
 const queryClient = new QueryClient();
 

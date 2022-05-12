@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
+  // eslint-disable-next-line prettier/prettier
   document.getElementById('root') as HTMLElement
 );
 root.render(

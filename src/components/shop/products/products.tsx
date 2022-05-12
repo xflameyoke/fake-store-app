@@ -20,26 +20,32 @@ const Products = () => {
   }
 
   return (
-    <div className="products">
-      <div className="products__list">
-        {data.map(
-          (product: {
-            id: number,
-            title: string,
-            category: string,
-            description: string,
-            price: number,
-          }) => (
-            <ProductsList
-              key={product.id}
-              title={product.title}
-              id={product.id}
-              description={product.description}
-              price={product.price}
-            />
-          )
-        )}
+    <div className="products__container">
+      <div className="products__header">
+        <h2>
+          Here's a list of all our products! For more specific informations
+          chose one of categories from above!
+        </h2>
       </div>
+      {data.map(
+        (product: {
+          id: number,
+          title: string,
+          category: string,
+          description: string,
+          price: number,
+          image: string,
+        }) => (
+          <ProductsList
+            key={product.id}
+            title={product.title}
+            id={product.id}
+            description={product.description}
+            price={product.price}
+            image={product.image}
+          />
+        )
+      )}
     </div>
   );
 };

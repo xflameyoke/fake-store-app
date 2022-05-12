@@ -1,17 +1,11 @@
-.container__nav {
+.nav__container {
   display: flex;
   border-top: 1px solid white;
   padding-left: 20%;
   background-color: #313765;
 }
 
-.shop__container {
-  display: grid;
-  grid-template-rows: 50px auto 50px;
-  grid-template-columns: 100%;
-}
-
 .products__container {
-  width: 100%;
-  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }

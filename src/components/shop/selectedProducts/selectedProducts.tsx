@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import ProductsList from '../productsList/productsList';
 import { Nav } from '../../nav';
+import './selectedProducts.scss';
 
 const SelectedProducts = () => {
   const { id } = useParams();
@@ -24,13 +25,13 @@ const SelectedProducts = () => {
 
   return (
     <>
-      <div className="container__nav">
+      <div className="selected__nav">
         <Nav link="/shop/jewelery" linkName="Jewelery" />
-        <Nav link="/shop/men's clothing" linkName="Men's clothes" />
-        <Nav link="/shop/women's clothing" linkName="Women's clothes" />
+        <Nav link="/shop/men's clothing" linkName="Men's clothing" />
+        <Nav link="/shop/women's clothing" linkName="Women's clothing" />
         <Nav link="/shop/electronics" linkName="Electronics" />
       </div>
-      <div>
+      <div className="selected__container">
         {data
           .filter(
             (selected: { category: string }) =>
@@ -42,6 +43,7 @@ const SelectedProducts = () => {
               title: string,
               price: number,
               description: string,
+              image: string,
             }) => (
               <ProductsList
                 key={selected.id}
@@ -49,6 +51,7 @@ const SelectedProducts = () => {
                 id={selected.id}
                 description={selected.description}
                 price={selected.price}
+                image={selected.image}
               />
             )
           )}
