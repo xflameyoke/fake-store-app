@@ -5,8 +5,12 @@
 }
 
 .selected__nav {
-  display: flex;
-  border-top: 1px solid white;
-  padding-left: 20%;
-  background-color: #313765;
+  width: 1000px;
+  font-size: 18px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
