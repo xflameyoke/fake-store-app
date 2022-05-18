@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import ProductsList from '../productsList/productsList';
 import { Nav } from '../../nav';
 import './selectedProducts.scss';
+import { LoadingSpinner } from '../../loadingSpinner';
 
 const SelectedProducts = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const SelectedProducts = () => {
   const { data, status } = useQuery('products', fetchSelected);
 
   if (status === 'loading') {
-    return <h1>Loading...</h1>;
+    return <LoadingSpinner />;
   }
 
   if (status === 'error') {

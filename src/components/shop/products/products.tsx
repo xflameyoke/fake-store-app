@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import './products.scss';
 import ProductsList from '../productsList/productsList';
+import { LoadingSpinner } from '../../loadingSpinner';
 
 const Products = () => {
   const fetchProducts = async () => {
@@ -12,7 +13,7 @@ const Products = () => {
   const { data, status } = useQuery('products', fetchProducts);
 
   if (status === 'loading') {
-    return <h1>Loading...</h1>;
+    return <LoadingSpinner />;
   }
 
   if (status === 'error') {

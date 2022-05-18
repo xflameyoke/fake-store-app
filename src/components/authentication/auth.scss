@@ -1,6 +1,6 @@
 .auth-container {
   width: 1000px;
-  height: 88vh;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -22,8 +22,12 @@
 
 .form--input {
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form--button {
+  width: 100%;
   margin-top: 20px;
 }
