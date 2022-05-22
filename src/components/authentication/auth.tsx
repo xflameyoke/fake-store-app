@@ -11,20 +11,13 @@ const Auth = () => {
     setIsLogin((prevState) => !prevState);
   };
 
-  const submitHandler = (event: { preventDefault: () => void }) => {
-    event.preventDefault();
-
-    const enteredEmail = formik.values.email;
-    const enteredPassword = formik.values.password;
-  };
-
   const formik = useFormik({
     initialValues: {
       email: '',
       password: '',
     },
     onSubmit: (values) => {
-      console.log(formik.values);
+      console.log(values);
     },
     validate: (values) => {
       const error = { email: '', password: '' };
@@ -88,7 +81,11 @@ const Auth = () => {
         <Button type="primary" htmlType="submit" className="form--button">
           Submit
         </Button>
-        <Button onClick={switchAutModeHandler} type="text">
+        <Button
+          onClick={switchAutModeHandler}
+          type="text"
+          className="form--button"
+        >
           {isLogin ? 'Create new account' : 'Login with existing account'}
         </Button>
       </Form>
