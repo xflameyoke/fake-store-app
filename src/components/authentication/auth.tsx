@@ -88,11 +88,7 @@ const Auth = () => {
         <Button type="primary" htmlType="submit" className="form--button">
           Submit
         </Button>
-        <Button
-          onClick={switchAutModeHandler}
-          type="text"
-          className="form--button"
-        >
+        <Button onClick={switchAutModeHandler} type="text">
           {isLogin ? 'Create new account' : 'Login with existing account'}
         </Button>
       </Form>
