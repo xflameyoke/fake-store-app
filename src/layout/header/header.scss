@@ -3,6 +3,7 @@
   height: 60px;
   font-size: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.2fr;
   line-height: 60px;
+  align-items: baseline;
 }

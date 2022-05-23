@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Footer, Header } from './layout/components';
+import { Footer, Header } from './layout';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ContactPage, HomePage, LoginPage, ShopPage } from './pages';
 import { SelectedProducts } from './components';

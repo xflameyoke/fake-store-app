@@ -4,3 +4,4 @@ export * from './nav';
 export * from './authentication';
 export * from './loadingSpinner';
 export * from './contact';
+export * from './cart';
