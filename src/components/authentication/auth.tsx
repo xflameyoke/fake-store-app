@@ -4,7 +4,7 @@ import './auth.scss';
 import { Button, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
 
-const Auth = () => {
+const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
   const [isLogin, setIsLogin] = useState(true);
 
   const switchAutModeHandler = () => {
@@ -78,8 +78,13 @@ const Auth = () => {
           value={formik.values.password}
           required
         />
-        <Button type="primary" htmlType="submit" className="form--button">
-          Submit
+        <Button
+          type="primary"
+          htmlType="submit"
+          className="form--button"
+          onClick={props.onLogin}
+        >
+          {isLogin ? 'Login' : 'Register'}
         </Button>
         <Button
           onClick={switchAutModeHandler}
