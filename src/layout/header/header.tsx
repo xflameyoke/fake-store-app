@@ -7,13 +7,17 @@ const Header = (props: {
   onLogout: React.MouseEventHandler<HTMLButtonElement>,
 }) => (
   <div className="header">
-    <Nav link="/" linkName="Home" />
-    <Nav link="/shop" linkName="Shop" />
-    <Nav link="/contact" linkName="Contact" />
-    <button className="logout--button" onClick={props.onLogout}>
-      Logout
-    </button>
-    <HeaderCartButton />
+    <div className="header--left">
+      <Nav link="/" linkName="Home" />
+      <Nav link="/shop" linkName="Shop" />
+      <Nav link="/contact" linkName="Contact" />
+    </div>
+    <div className="header--right">
+      <button className="logout--button" onClick={props.onLogout}>
+        Logout
+      </button>
+      <HeaderCartButton />
+    </div>
   </div>
 );
 

@@ -3,9 +3,20 @@
   height: 60px;
   font-size: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.2fr 0.2fr;
+  grid-template-columns: 3fr 1fr;
   line-height: 60px;
   align-items: baseline;
+}
+
+.header--left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header--right {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
 }
 
 .logout--button {
@@ -17,4 +28,5 @@
     text-decoration: underline;
     border-radius: 25px;
     font-size: 18px;
+    margin-right: 5%;
 }
