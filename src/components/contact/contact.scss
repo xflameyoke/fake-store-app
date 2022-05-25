@@ -1,4 +1,20 @@
-.contact--form {
+.contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__form {
     display: flex;
     flex-direction: column;
+    padding: 5%;
+    width: 100%;
+}
+
+.form__input {
+    width: 100%;
+}
+
+.form__input--message {
+    height: 70px;
 }

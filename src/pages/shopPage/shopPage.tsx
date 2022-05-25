@@ -4,14 +4,14 @@ import './shopPage.scss';
 
 const ShopPage = () => (
   <>
-    <div className="nav__container">
+    <div className="shop">
       <Nav link="/shop/jewelery" linkName="Jewelery" />
       <Nav link="/shop/men's clothing" linkName="Men's clothing" />
       <Nav link="/shop/women's clothing" linkName="Women's clothing" />
       <Nav link="/shop/electronics" linkName="Electronics" />
     </div>
 
-    <div className="products__container">
+    <div className="shop__products">
       <Products />
     </div>
   </>

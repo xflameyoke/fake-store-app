@@ -1,9 +1,4 @@
-.products__container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.nav__container {
+.shop {
   width: 1000px;
   font-size: 18px;
   margin: 0 auto;
@@ -12,4 +7,9 @@
   border-bottom: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.shop__products {
+  max-width: 1000px;
+  margin: 0 auto;
 }

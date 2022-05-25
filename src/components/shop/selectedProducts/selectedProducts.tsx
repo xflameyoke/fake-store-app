@@ -32,7 +32,7 @@ const SelectedProducts = () => {
         <Nav link="/shop/women's clothing" linkName="Women's clothing" />
         <Nav link="/shop/electronics" linkName="Electronics" />
       </div>
-      <div className="selected__container">
+      <div className="selected">
         {data
           .filter(
             (selected: { category: string }) =>

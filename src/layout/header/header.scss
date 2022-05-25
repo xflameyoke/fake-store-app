@@ -8,18 +8,18 @@
   align-items: baseline;
 }
 
-.header--left {
+.header__left {
   display: flex;
   justify-content: flex-start;
 }
 
-.header--right {
+.header__right {
   display: flex;
   align-items: baseline;
   justify-content: end;
 }
 
-.logout--button {
+.logout__button {
     width: 55px;
     height: 1rem;
     background: #313765;

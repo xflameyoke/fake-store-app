@@ -4,10 +4,10 @@ import './headerCartButton.scss';
 
 const HeaderCartButton = () => (
   <button className="button">
-    <span className="button--icon">
+    <span className="button__icon">
       <CartIcon />
     </span>
-    <span className="button--badge">3</span>
+    <span>3</span>
   </button>
 );
 

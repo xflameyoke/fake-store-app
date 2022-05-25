@@ -44,21 +44,21 @@ const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
     alert('Failed');
   };
   return (
-    <div className="auth-container">
+    <div className="auth">
       <h1>{isLogin ? 'Login' : 'Sign up'}</h1>
       <Form
-        className="form"
+        className="auth__form"
         name="basic"
         initialValues={{ remember: true }}
         onFinish={formik.handleSubmit}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        <label htmlFor="email" className="form--label">
+        <label htmlFor="email" className="form__label">
           Email
         </label>
         <Input
-          className="form--input"
+          className="form__input"
           id="email"
           name="email"
           type="email"
@@ -66,11 +66,11 @@ const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
           value={formik.values.email}
           required
         />
-        <label htmlFor="password" className="form--label">
+        <label htmlFor="password" className="form__label">
           Password
         </label>
         <Input
-          className="form--input"
+          className="form__input"
           id="password"
           name="password"
           type="password"
@@ -81,7 +81,7 @@ const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
         <Button
           type="primary"
           htmlType="submit"
-          className="form--button"
+          className="form__button"
           onClick={props.onLogin}
         >
           {isLogin ? 'Login' : 'Register'}
