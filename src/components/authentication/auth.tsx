@@ -30,24 +30,36 @@ const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
   }
 
   const onFinish = () => {
-      // eslint-disable-next-line no-empty
+    let url;
     if (isLogin) {
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBlA5nVIWyzfqUKZhv8EqOiIqaMhHgqOJg'
     } else {
-      fetch(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBlA5nVIWyzfqUKZhv8EqOiIqaMhHgqOJg',
-        {
-          method: 'POST',
-          body: JSON.stringify({
-            email: email,
-            password: password,
-            returnSecureToken: true,
-          }),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+     url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBlA5nVIWyzfqUKZhv8EqOiIqaMhHgqOJg'
     }
+    fetch(
+      url,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          email: email,
+          password: password,
+          returnSecureToken: true,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((res) => {
+        setIsLogin(false);
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then(() => {
+            alert('Authentication failed!');
+          })
+        }
+      }).then((data) => {
+        console.log(data);
+      });
   };
 
   
