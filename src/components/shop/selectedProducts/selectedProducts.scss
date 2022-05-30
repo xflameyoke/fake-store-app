@@ -1,9 +1,10 @@
-.shop {
-  height: 100%;
-  min-height: 100vh;
+.selected {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
-.shop__nav {
+.selected__nav {
   width: 1000px;
   font-size: 18px;
   margin: 0 auto;
@@ -12,9 +13,4 @@
   border-bottom: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.shop__products {
-  max-width: 1000px;
-  margin: 0 auto;
 }

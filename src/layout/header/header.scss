@@ -1,0 +1,32 @@
+.header {
+  background-color: #313765;
+  height: 60px;
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  line-height: 60px;
+  align-items: baseline;
+}
+
+.header__left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header__right {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+}
+
+.logout__button {
+    width: 55px;
+    height: 1rem;
+    background: #313765;
+    color: #7dc5a5;
+    border: none;
+    text-decoration: underline;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-right: 5%;
+}
