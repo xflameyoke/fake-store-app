@@ -2,9 +2,17 @@ import React from 'react';
 import './loadingSpinner.scss';
 
 const LoadingSpinner = () => (
-  <div className="spinner-container">
-    <div className="loading-spinner"></div>
-    <div>Loading</div>
+  <div className="spinner">
+    <div className="spinner--animation">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 );
 

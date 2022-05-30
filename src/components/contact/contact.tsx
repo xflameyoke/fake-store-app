@@ -13,6 +13,7 @@ const validateMessages = {
 
 const Contact = () => {
   const onFinish = (values: string) => {
+    // eslint-disable-next-line no-console
     console.log(values);
   };
 
