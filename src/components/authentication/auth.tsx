@@ -4,6 +4,7 @@ import './auth.scss';
 import { Button, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
 import AuthContext from '../../store/auth-context';
+import { useNavigate } from 'react-router-dom';
 
 const validateMessages = {
   required: '${label} is required',
@@ -19,6 +20,7 @@ const Auth = () => {
   const [password, setPassword] = useState('');
 
   const authCtx = useContext(AuthContext);
+  const navigate = useNavigate();
   
   const switchAutModeHandler = () => {
     setIsLogin((prevState) => !prevState);
@@ -62,6 +64,7 @@ const Auth = () => {
         }
       }).then((data) => {
         authCtx.login(data.idToken);
+        navigate('/shop')
       });
   };
 
