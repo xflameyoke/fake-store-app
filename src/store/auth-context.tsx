@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, useState } from 'react';
 
@@ -31,7 +32,7 @@ export const AuthContextProvider = (props: {
 
   const contextValue = {
     token: token,
-    isLoggedIn: userIsLoggedIn,
+    isLogged: userIsLoggedIn,
     login: loginHandler,
     logout: logoutHandler,
   };
