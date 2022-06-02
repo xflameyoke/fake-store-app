@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './auth.scss';
 import { Button, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
+import AuthContext from '../../store/auth-context';
 
 const validateMessages = {
   required: '${label} is required',
@@ -12,10 +13,12 @@ const validateMessages = {
   },
 };
 
-const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
+const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const authCtx = useContext(AuthContext);
   
   const switchAutModeHandler = () => {
     setIsLogin((prevState) => !prevState);
@@ -58,7 +61,7 @@ const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
           })
         }
       }).then((data) => {
-        console.log(data);
+        authCtx.login(data.idToken);
       });
   };
 
@@ -92,7 +95,6 @@ const Auth = (props: { onLogin: React.MouseEventHandler<HTMLElement> }) => {
           type="primary"
           htmlType="submit"
           className="form__button"
-          onClick={props.onLogin}
         >
           {isLogin ? 'Login' : 'Register'}
         </Button>
