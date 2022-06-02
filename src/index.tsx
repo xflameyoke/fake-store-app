@@ -4,17 +4,21 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { AuthContextProvider } from './store/auth-context';
 
 const root = ReactDOM.createRoot(
   // eslint-disable-next-line prettier/prettier
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-    <App />
-    </React.StrictMode>
-  </BrowserRouter>
+  <AuthContextProvider>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </AuthContextProvider>
+    
   
 );
 

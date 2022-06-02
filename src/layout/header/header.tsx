@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './header.scss';
 import { Nav } from '../../components';
 import HeaderCartButton from '../headerCartButton/headerCartButton';
