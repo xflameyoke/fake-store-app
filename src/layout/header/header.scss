@@ -16,7 +16,8 @@
 .header__right {
   display: flex;
   align-items: baseline;
-  justify-content: end;
+  justify-content: flex-end;
+  margin-right: 1rem;
 }
 
 .logout__button {

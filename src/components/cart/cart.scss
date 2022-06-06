@@ -1,0 +1,13 @@
+.cart {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
+}
+
+.cart__products, .cart__amount, .cart--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

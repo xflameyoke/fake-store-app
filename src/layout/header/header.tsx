@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import './header.scss';
 import { Nav } from '../../components';
 import HeaderCartButton from '../headerCartButton/headerCartButton';
-import AuthContext from '../../store/auth-context';
-import { useNavigate } from 'react-router-dom';
+import AuthContext from '../../store/context';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const authCtx = useContext(AuthContext);
@@ -25,7 +25,9 @@ const Header = () => {
         <button className="header logout__button" onClick={logoutHandler}>
           Logout
         </button>
-        <HeaderCartButton />
+        <Link to="./cart">
+          <HeaderCartButton />
+        </Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import './auth.scss';
 import { Button, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
-import AuthContext from '../../store/auth-context';
+import AuthContext from '../../store/context';
 import { useNavigate } from 'react-router-dom';
 
 const validateMessages = {
