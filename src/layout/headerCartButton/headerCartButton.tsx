@@ -7,7 +7,7 @@ const HeaderCartButton = () => (
     <span className="button__icon">
       <CartIcon />
     </span>
-    <span>3</span>
+    <span>11</span>
   </button>
 );
 

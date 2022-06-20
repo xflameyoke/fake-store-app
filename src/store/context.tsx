@@ -22,16 +22,21 @@ export const ContextProvider = (props: {
     | null
     | undefined,
 }) => {
-  const [token, setToken] = useState('');
+  const initialToken = localStorage.getItem('token');
+  // eslint-disable-next-line prettier/prettier
+  const [token, setToken] = useState(initialToken as string);
 
   const userIsLoggedIn = !!token;
 
-  const loginHandler = (token: React.SetStateAction<string>) => {
+  const loginHandler = (token: string) => {
     setToken(token);
+    // eslint-disable-next-line prettier/prettier
+    localStorage.setItem('token', token);
   };
 
   const logoutHandler = () => {
     setToken('');
+    localStorage.removeItem('token');
   };
 
   const addItemToCartHandler = (item: string) => {};
