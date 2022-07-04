@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useQuery } from 'react-query';
 import { Button } from 'antd';
 import './cart.scss';
 import { LoadingSpinner } from '../loadingSpinner';
+import Context from '../../store/context';
 
 const Cart = () => {
+  const context = useContext(Context);
+
   const fetchCart = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     return response.json();
@@ -25,7 +28,7 @@ const Cart = () => {
       <div className="cart__products">
         <div className="grid__left">
           <h1>Your Cart:</h1>
-          <div className="cart__amount">Total Amount: 25$</div>
+          <div className="cart__amount">{context.totalAmount}</div>
           <div className="cart--button">
             <Button>Order</Button>
           </div>

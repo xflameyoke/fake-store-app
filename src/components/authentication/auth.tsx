@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import './auth.scss';
 import { Button, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
-import AuthContext from '../../store/context';
+import Context from '../../store/context';
 import { useNavigate } from 'react-router-dom';
 
 const validateMessages = {
@@ -19,7 +19,7 @@ const Auth = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const authCtx = useContext(AuthContext);
+  const authCtx = useContext(Context);
   const navigate = useNavigate();
   
   const switchAutModeHandler = () => {

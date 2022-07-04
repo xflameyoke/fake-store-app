@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, useState } from 'react';
 
+
 const Context = createContext({
   token: '',
   isLogged: false,
@@ -40,7 +41,7 @@ export const ContextProvider = (props: {
   };
 
   const addItemToCartHandler = (item: string) => {};
-  const removeItemFromCartHandler = (id: number) => {};
+  const removeItemFromCartHandler = (id: number) => { };
 
   const contextValue = {
     token: token,
@@ -48,7 +49,7 @@ export const ContextProvider = (props: {
     login: loginHandler,
     logout: logoutHandler,
     items: [],
-    totalAmount: 0,
+    totalAmount: 1,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };

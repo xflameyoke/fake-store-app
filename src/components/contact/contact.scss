@@ -1,20 +1,5 @@
 .contact {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact__form {
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    width: 100%;
-}
-
-.form__input {
-    width: 100%;
-}
-
-.form__input--message {
-    height: 70px;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
